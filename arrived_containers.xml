@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gwt>
+	<state name="New Document" previousaction="SaveAndClose" nextaction="">
+		<field name="Author">~[Administrator]:[Designers]:[CUAdministrator]</field>
+		<field name="Reader">~*</field>
+		<field name="DocumentLevel">#0</field>
+		<field name="NeedValidation">1</field>
+		<field name="Scheduler">@UserName</field>
+		<field name="IssueDate">@Now</field>
+		<field name="State">2</field>
+		<field name="UnPacked">1</field>
+		<field name="Arrived">1</field>
+		<field name="Customs">1</field>
+	</state>
+	<state name="Create Document" previousaction="SaveAndDisplay" nextaction="">
+		<field name="DocumentLevel">#1</field>
+		<field name="NeedValidation">2</field>
+		<field name="State">1</field>
+		<field name="Scheduler">@UserName</field>
+		<field name="IssueDate">@Now</field>
+		<field name="UnPacked">1</field>
+		<field name="Arrived">1</field>
+		<field name="Customs">1</field>
+	</state>
+	<state name="On the display" previousaction="DisplayIt" nextaction="">
+		<field name="NeedValidation">2</field>
+		<field name="State">1</field>
+		<field name="DocumentLevel">#1</field>
+	</state>
+	<state name="Hidden" previousaction="HideIt" nextaction="">
+		<field name="State">2</field>
+	</state>
+	<state name="Cancelled" previousaction="Remove" nextaction="">
+		<field name="State">4</field>
+	</state>
+	<state name="Free for unload" previousaction="FreeForUnload" nextaction="">
+		<field name="Arrived">2</field>
+		<field name="Customs">2</field>
+		<field name="CustomsName">@UserName</field>
+		<field name="CustomsDate">@Now</field>
+	</state>
+	<state name="Free for usage" previousaction="FreeForUsage" nextaction="">
+		<field name="Customs">3</field>
+		<field name="CustomsName">@UserName</field>
+		<field name="CustomsDate">@Now</field>
+	</state>
+	<state name="UnPacked" previousaction="UnPacked" nextaction="">
+		<field name="DocumentLevel">#2</field>
+		<field name="State">5</field>
+		<field name="UnPacked">2</field>
+		<field name="UnpackDate">@Now</field>
+		<field name="UnpackerName">@UserName</field>
+	</state>
+</gwt>
